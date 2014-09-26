@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.pbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.pbar.css" />
+    <title>PBAR</title>    
+</head>
+<body>
+    <div class="pbar" data-min="0" data-max="60" data-val="30"></div>
+    <div class="pbar" data-min="0" data-max="120" data-val="115"></div>
+    <div class="pbar" data-min="0" data-max="20" data-val="17"></div>
+    <div class="pbar" data-min="0" data-max="160" data-val="44"></div>
+    <div class="pbar" data-min="0" data-max="44" data-val="44"></div>
+    <script>
+        $(document).ready(function () {
+            $(".pbar").pBar();
+        });
+    </script>
+</body>
+</html>

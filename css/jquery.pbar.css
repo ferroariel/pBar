@@ -1,0 +1,86 @@
+﻿.pbar {
+    display: block;
+    width: 100%;
+    max-width: 80px;
+    height: 12px;
+    background:rgb(230,230,230);
+    background-size: 100% 100%;
+    position: relative;    
+    margin:1px;
+}
+
+.pbar span {
+    width: 20%;    
+    display: block;
+    height: 100%;
+    float: left;
+    -webkit-animation-name: grow;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+.pbar span.warning {
+    background-color:#ffea00;
+}
+.pbar span.ok {
+    background-color:#8cdf2a;
+}
+.pbar span.full {
+    -webkit-animation-name: grow, blinkred;
+    -webkit-animation-duration: 500ms, 900ms;
+    -webkit-animation-iteration-count: 1, 5;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-fill-mode: forwards, forwards;
+}
+.pbar span.empty {
+    -webkit-animation-name: fadered;
+    -webkit-animation-duration: 2000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-fill-mode: forwards;
+}
+.pbar span.empty + label {
+    color:silver;
+}
+.pbar label {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: -1px;
+    position: absolute;
+    text-align: center;    
+    font: bold normal 10px "Segoe UI";        
+    /*text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;*/
+}
+
+@-webkit-keyframes blinkred {
+    0% {
+        background-color: red;
+        opacity:1;
+    }
+    50% {
+        background-color: rgb(255,200,200);
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@-webkit-keyframes fadered {
+    0% {
+        background-color: red;                
+    }
+    80% {
+        background-color: transparent;        
+    }
+    
+}
+
+@-webkit-keyframes grow {
+    0% {
+        width: 0px;                
+    }        
+}
+    
